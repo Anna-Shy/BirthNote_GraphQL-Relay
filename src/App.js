@@ -1,22 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import fetchGraphQL from "./fetchGraphQL";
+import "./App.css";
 
 function App() {
+  const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    let isMounted = true;
+    fetchGraphQL(`
+      query {
+        firstName
+        lastName
+      }
+    `)
+      .then((response) => {
+        if (!isMounted) {
+          return;
+        }
+        setUser(response.data);
+
+        // setName(response.data.firstName);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>List user:</p>
+        <ul>
+          {user.map((userInfo, id) => {
+            return (
+              <li key={id}>
+                {userInfo.firstName} - {userInfo.lastName}
+              </li>
+            );
+          })}
+        </ul>
       </header>
     </div>
   );
