@@ -1,41 +1,35 @@
-import React, { useState, useEffect } from "react";
-import fetchGraphQL from "./fetchGraphQL";
+import React from "react";
+import graphql from "babel-plugin-relay/macro";
+import {
+  RelayEnvironmentProvider,
+  loadQuery,
+  usePreloadedQuery,
+} from "react-relay/hooks";
+import RelayEnvironment from "./RelayEnvironment";
 import "./App.css";
 
-function App() {
-  const [user, setUser] = useState([]);
+const { Suspense } = React;
 
-  useEffect(() => {
-    let isMounted = true;
-    fetchGraphQL(`
-      query {
-        firstName
-        lastName
-      }
-    `)
-      .then((response) => {
-        if (!isMounted) {
-          return;
-        }
-        setUser(response.data);
+const PersonQuery = graphql`
+  query AppQuery {
+    users {
+      firstName
+      lastName
+    }
+  }
+`;
 
-        // setName(response.data.firstName);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+const preloadedQuery = loadQuery(RelayEnvironment, PersonQuery, {});
 
-    return () => {
-      isMounted = false;
-    };
-  }, []);
+function App(props) {
+  const data = usePreloadedQuery(PersonQuery, props.preloadedQuery);
 
   return (
     <div className="App">
       <header className="App-header">
         <p>List user:</p>
         <ul>
-          {user.map((userInfo, id) => {
+          {data.users.map((userInfo, id) => {
             return (
               <li key={id}>
                 {userInfo.firstName} - {userInfo.lastName}
@@ -48,4 +42,14 @@ function App() {
   );
 }
 
-export default App;
+function AppRoot(props) {
+  return (
+    <RelayEnvironmentProvider environment={RelayEnvironment}>
+      <Suspense fallback={"Loading..."}>
+        <App preloadedQuery={preloadedQuery} />
+      </Suspense>
+    </RelayEnvironmentProvider>
+  );
+}
+
+export default AppRoot;
