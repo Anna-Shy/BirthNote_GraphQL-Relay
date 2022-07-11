@@ -1,37 +1,57 @@
 [
   {
     "userId": 1,
-    "firstName": "Krish",
-    "lastName": "Lee",
+    "userName": "Krish",
+    "dateBirth": "20-04-1988",
+    "userAge": 34,
     "phoneNumber": "123456",
-    "emailAddress": "krish.lee@learningcontainer.com"
+    "userPreferences": [
+      "ball"
+    ],
+    "userAbout": "krish.lee@learningcontainer.com"
   },
   {
     "userId": 2,
-    "firstName": "Racks",
-    "lastName": "Jacson",
+    "userName": "Racks",
+    "dateBirth": "12-09-1980",
+    "userAge": 41,
     "phoneNumber": "123456",
-    "emailAddress": "racks.jacson@learningcontainer.com"
+    "userPreferences": [
+      "ball"
+    ],
+    "userAbout": "racks.jacson@learningcontainer.com"
   },
   {
     "userId": 3,
-    "firstName": "Denial",
-    "lastName": "Roast",
-    "phoneNumber": "33333333",
-    "emailAddress": "denial.roast@learningcontainer.com"
+    "userName": "Denial",
+    "dateBirth": "12-09-2001",
+    "userAge": 20,
+    "phoneNumber": "3333333",
+    "userPreferences": [
+      "ball"
+    ],
+    "userAbout": "denial.roast@learningcontainer.com"
   },
   {
     "userId": 4,
-    "firstName": "Devid",
-    "lastName": "Neo",
+    "userName": "Devid",
+    "dateBirth": "12-09-2015",
+    "userAge": 6,
     "phoneNumber": "222222222",
-    "emailAddress": "devid.neo@learningcontainer.com"
+    "userPreferences": [
+      "ball"
+    ],
+    "userAbout": "devid.neo@learningcontainer.com"
   },
   {
     "userId": 5,
-    "firstName": "Jone",
-    "lastName": "Mac",
+    "userName": "Jone",
+    "dateBirth": "12-09-2000",
+    "userAge": 21,
     "phoneNumber": "111111111",
-    "emailAddress": "jone.mac@learningcontainer.com"
+    "userPreferences": [
+      "ball"
+    ],
+    "userAbout": "jone.mac@learningcontainer.com"
   }
 ]
