@@ -1,13 +1,12 @@
-const {
-  GraphQLSchema,
-  GraphQLObjectType,
-  GraphQLList
-} = require("graphql");
-const userType = require("./usersType");
+import { GraphQLSchema, GraphQLObjectType, GraphQLList } from "graphql";
+import data from "../src/person.json" assert { "type": "json" };
 
-const data = require("../src/person.json");
+import userType from "./usersType.js";
+import createUserMutation from "./mutation/createUserMutation.js";
+import updateUserMutation from "./mutation/updateUserMutation.js";
+import deleteUserMutation from "./mutation/deleteUserMutation.js";
 
-module.exports = schema = new GraphQLSchema({
+const schema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: "RootQueryType",
     fields: () => ({
@@ -32,9 +31,11 @@ module.exports = schema = new GraphQLSchema({
   mutation: new GraphQLObjectType({
     name: "Mutations",
     fields: () => ({
-      createUser: require("./createUserMutation"),
-      updateUser: require("./updateUserMutation"),
-      deleteUser: require("./deleteUserMutation"),
+      createUser: createUserMutation,
+      updateUser: updateUserMutation,
+      deleteUser: deleteUserMutation,
     }),
   }),
 });
+
+export default schema;

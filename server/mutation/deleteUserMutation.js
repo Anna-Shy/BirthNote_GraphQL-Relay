@@ -1,6 +1,6 @@
-const { GraphQLList, GraphQLID } = require("graphql");
+import { GraphQLList, GraphQLID } from "graphql";
 
-module.exports = deleteUserMutation = {
+const deleteUserMutation = {
   type: new GraphQLList(GraphQLID),
   description: "Delete a user",
   resolve: ({ userId }) => {
@@ -13,3 +13,5 @@ module.exports = deleteUserMutation = {
     return deletedUsers[0];
   },
 };
+
+export default deleteUserMutation;

@@ -1,7 +1,7 @@
-const userType = require("./usersType");
-const userArgs = require("./userArgs");
+import userType from "../usersType.js";
+import userArgs from "../userArgs.js";
 
-module.exports = updateUserMutation = {
+const updateUserMutation = {
   type: userType,
   args: userArgs,
   description: "Update a user",
@@ -25,3 +25,5 @@ module.exports = updateUserMutation = {
     return newUser;
   },
 };
+
+export default updateUserMutation;

@@ -1,7 +1,7 @@
-const userType = require("./usersType");
-const userArgs = require("./userArgs");
+import userType from "../usersType.js";
+import userArgs from "../userArgs.js";
 
-module.exports = createUserMutation = {
+const createUserMutation = {
   type: userType,
   args: userArgs,
   description: "Create a new user",
@@ -26,10 +26,19 @@ module.exports = createUserMutation = {
       userPreferences,
       userAbout,
     };
-
     const users = [];
     users.push(newUser);
 
     return users[0];
+
+    // db.read();
+    // db.data ||= { users: [] };
+
+    // db.data.users.push(newUser);
+    // db.write();
+
+    // return db.read();
   },
 };
+
+export default createUserMutation;

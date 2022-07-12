@@ -1,11 +1,6 @@
-const {
-  GraphQLList,
-  GraphQLID,
-  GraphQLString,
-  GraphQLInt,
-} = require("graphql");
+import { GraphQLList, GraphQLID, GraphQLString, GraphQLInt } from "graphql";
 
-module.exports = userArgs = {
+const userArgs = {
   apiType: { type: GraphQLString },
   userId: { type: GraphQLID },
   userName: { type: GraphQLString },
@@ -15,3 +10,5 @@ module.exports = userArgs = {
   userPreferences: { type: new GraphQLList(GraphQLString) },
   userAbout: { type: GraphQLString },
 };
+
+export default userArgs;
