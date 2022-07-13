@@ -1,10 +1,24 @@
 import { GraphQLSchema, GraphQLObjectType, GraphQLList } from "graphql";
-import data from "../src/person.json" assert { "type": "json" };
+// import data from "../src/person.json" assert { "type": "json" };
+// import data from "../db.json" assert { "type": "json" };
+import { join, dirname } from "path";
+import { Low, JSONFile } from "lowdb";
+import { fileURLToPath } from "url";
 
 import userType from "./usersType.js";
 import createUserMutation from "./mutation/createUserMutation.js";
 import updateUserMutation from "./mutation/updateUserMutation.js";
 import deleteUserMutation from "./mutation/deleteUserMutation.js";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Use JSON file for storage
+// const file = join(__dirname, '../../src/person.json');
+const file = join(__dirname, "./db.json");
+const adapter = new JSONFile(file);
+const db = new Low(adapter);
+
+await db.read();
 
 const schema = new GraphQLSchema({
   query: new GraphQLObjectType({
@@ -12,18 +26,7 @@ const schema = new GraphQLSchema({
     fields: () => ({
       users: {
         type: new GraphQLList(userType),
-        resolve: () => [
-          {
-            apiType: "user",
-            userId: data[1].userId,
-            userName: data[1].userName,
-            dateBirth: data[1].dateBirth,
-            userAge: data[1].userAge,
-            phoneNumber: data[1].phoneNumber,
-            userPreferences: data[1].userPreferences,
-            userAbout: data[1].userAbout,
-          },
-        ],
+        resolve: () => db.data.users,
       },
     }),
   }),

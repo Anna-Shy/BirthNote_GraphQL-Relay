@@ -1,5 +1,20 @@
+import { join, dirname } from "path";
+import { Low, JSONFile } from "lowdb";
+import { fileURLToPath } from "url";
+
 import userType from "../usersType.js";
 import userArgs from "../userArgs.js";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Use JSON file for storage
+// const file = join(__dirname, '../../src/person.json');
+const file = join(__dirname, "../db.json");
+const adapter = new JSONFile(file);
+const db = new Low(adapter);
+
+await db.read();
+// db.data ||= { users: [] };
 
 const createUserMutation = {
   type: userType,
@@ -7,18 +22,10 @@ const createUserMutation = {
   description: "Create a new user",
   resolve: (
     root,
-    {
-      userId,
-      userName,
-      dateBirth,
-      userAge,
-      phoneNumber,
-      userPreferences,
-      userAbout,
-    }
+    { userName, dateBirth, userAge, phoneNumber, userPreferences, userAbout }
   ) => {
     const newUser = {
-      userId,
+      userId: Date.now().toString(),
       userName,
       dateBirth,
       userAge,
@@ -26,18 +33,13 @@ const createUserMutation = {
       userPreferences,
       userAbout,
     };
-    const users = [];
-    users.push(newUser);
+    db.data.users.push(newUser);
 
-    return users[0];
+    db.write();
 
-    // db.read();
-    // db.data ||= { users: [] };
+    const userDB = db.data.users.find((user) => user.userId === newUser.userId);
 
-    // db.data.users.push(newUser);
-    // db.write();
-
-    // return db.read();
+    return userDB;
   },
 };
 
