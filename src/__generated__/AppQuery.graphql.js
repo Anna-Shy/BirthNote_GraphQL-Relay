@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<4ffc68620916dfe1bc8634ec501a15ac>>
+ * @generated SignedSource<<a285a2370d096f2ef05b03f2ced4d5d5>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -22,14 +22,14 @@ var v0 = [
         "alias": null,
         "args": null,
         "kind": "ScalarField",
-        "name": "userName",
+        "name": "firstName",
         "storageKey": null
       },
       {
         "alias": null,
         "args": null,
         "kind": "ScalarField",
-        "name": "dateBirth",
+        "name": "lastName",
         "storageKey": null
       }
     ],
@@ -54,16 +54,16 @@ return {
     "selections": (v0/*: any*/)
   },
   "params": {
-    "cacheID": "c8abf0775f52fec00eb368cfc63330e6",
+    "cacheID": "85564ebd7a1ad6ef728c513bab0acde3",
     "id": null,
     "metadata": {},
     "name": "AppQuery",
     "operationKind": "query",
-    "text": "query AppQuery {\n  users {\n    userName\n    dateBirth\n  }\n}\n"
+    "text": "query AppQuery {\n  users {\n    firstName\n    lastName\n  }\n}\n"
   }
 };
 })();
 
-node.hash = "61a616fe161da75203374d92158cea00";
+node.hash = "c4c97355dc22c60e1edd3ec6b3a745a2";
 
 module.exports = node;

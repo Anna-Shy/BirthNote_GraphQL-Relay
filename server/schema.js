@@ -1,6 +1,4 @@
 import { GraphQLSchema, GraphQLObjectType, GraphQLList } from "graphql";
-// import data from "../src/person.json" assert { "type": "json" };
-// import data from "../db.json" assert { "type": "json" };
 import { join, dirname } from "path";
 import { Low, JSONFile } from "lowdb";
 import { fileURLToPath } from "url";
@@ -13,8 +11,7 @@ import deleteUserMutation from "./mutation/deleteUserMutation.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Use JSON file for storage
-// const file = join(__dirname, '../../src/person.json');
-const file = join(__dirname, "./db.json");
+const file = join(__dirname, '../../src/person.json');
 const adapter = new JSONFile(file);
 const db = new Low(adapter);
 

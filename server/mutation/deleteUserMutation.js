@@ -1,38 +1,34 @@
-import { GraphQLList, GraphQLID } from "graphql";
+import { GraphQLID } from "graphql";
 import { join, dirname } from "path";
-import { LowSync, JSONFileSync } from "lowdb";
+import { Low, JSONFile } from "lowdb";
 import { fileURLToPath } from "url";
 
-import * as low from "lowdb";
-// import * as FileSync from 'lowdb/adapters/FileSync';
+import userType from "../usersType.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Use JSON file for storage
-// const file = join(__dirname, '../../src/person.json');
-const filePath = join(__dirname, "../db.json");
-// const adapter = new JSONFile(file);
-// const db = new Low(adapter);
-const adapter = new JSONFileSync(filePath);
-const db = new LowSync(adapter);
+const file = join(__dirname, '../../src/person.json');
+const adapter = new JSONFile(file);
+const db = new Low(adapter);
 
 const deleteUserMutation = {
-  type: GraphQLID,
+  type: userType,
   args: { userId: { type: GraphQLID } },
   description: "Delete a user",
   resolve: async (root, { userId }) => {
     await db.read();
 
-    // const userIndex = db.data.users.findIndex((user) => user.userId === userId);
-    // if (userIndex === -1) {
-    //   throw new Error("User not found!");
-    // }
+    const userIndex = db.data.users.findIndex((user) => user.userId === userId);
 
-    const deleted = db.data.users.remove((user) => user.userId === userId);
+    if (userIndex === -1) {
+      throw new Error("User not found!");
+    }
+
+    const deletedUsers = db.data.users.splice(userIndex, 1);
     db.write();
-    deleted.value();
 
-    return null;
+    return deletedUsers;
   },
 };
 

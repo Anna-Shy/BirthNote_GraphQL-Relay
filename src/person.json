@@ -1,57 +1,28 @@
-[
-  {
-    "userId": 1,
-    "userName": "Krish",
-    "dateBirth": "20-04-1988",
-    "userAge": 34,
-    "phoneNumber": "123456",
-    "userPreferences": [
-      "ball"
-    ],
-    "userAbout": "krish.lee@learningcontainer.com"
-  },
-  {
-    "userId": 2,
-    "userName": "Racks",
-    "dateBirth": "12-09-1980",
-    "userAge": 41,
-    "phoneNumber": "123456",
-    "userPreferences": [
-      "ball"
-    ],
-    "userAbout": "racks.jacson@learningcontainer.com"
-  },
-  {
-    "userId": 3,
-    "userName": "Denial",
-    "dateBirth": "12-09-2001",
-    "userAge": 20,
-    "phoneNumber": "3333333",
-    "userPreferences": [
-      "ball"
-    ],
-    "userAbout": "denial.roast@learningcontainer.com"
-  },
-  {
-    "userId": 4,
-    "userName": "Devid",
-    "dateBirth": "12-09-2015",
-    "userAge": 6,
-    "phoneNumber": "222222222",
-    "userPreferences": [
-      "ball"
-    ],
-    "userAbout": "devid.neo@learningcontainer.com"
-  },
-  {
-    "userId": 5,
-    "userName": "Jone",
-    "dateBirth": "12-09-2000",
-    "userAge": 21,
-    "phoneNumber": "111111111",
-    "userPreferences": [
-      "ball"
-    ],
-    "userAbout": "jone.mac@learningcontainer.com"
-  }
-]
+{
+  "users": [
+    {
+      "apiType": "user",
+      "userId": "1657792154230",
+      "userName": "user",
+      "dateBirth": "Fri Sep 08 2000",
+      "userAge": 21,
+      "userAbout": "some info"
+    },
+    {
+      "apiType": "user",
+      "userId": "1657792156434",
+      "userName": "use1",
+      "dateBirth": "Fri Sep 08 2000",
+      "userAge": 21,
+      "userAbout": "some info"
+    },
+    {
+      "apiType": "user",
+      "userId": "1657792159088",
+      "userName": "use3",
+      "dateBirth": "Fri Sep 08 2000",
+      "userAge": 21,
+      "userAbout": "some info"
+    }
+  ]
+}

@@ -8,13 +8,12 @@ import userArgs from "../userArgs.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Use JSON file for storage
-// const file = join(__dirname, '../../src/person.json');
-const file = join(__dirname, "../db.json");
+const file = join(__dirname, '../../src/person.json');
 const adapter = new JSONFile(file);
 const db = new Low(adapter);
 
 await db.read();
-// db.data ||= { users: [] };
+db.data ||= { users: [] };
 
 const createUserMutation = {
   type: userType,
@@ -25,10 +24,11 @@ const createUserMutation = {
     { userName, dateBirth, userAge, phoneNumber, userPreferences, userAbout }
   ) => {
     const newUser = {
+      apiType: "user",
       userId: Date.now().toString(),
       userName,
-      dateBirth,
-      userAge,
+      dateBirth: new Date(dateBirth).toDateString(),
+      userAge: ((new Date().getTime() - new Date(dateBirth)) / (24 * 3600 * 365.25 * 1000)) | 0,
       phoneNumber,
       userPreferences,
       userAbout,
