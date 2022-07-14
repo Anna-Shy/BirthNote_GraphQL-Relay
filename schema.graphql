@@ -1,11 +1,24 @@
-type Query {
-  users: [User!]!
+schema {
+  query: RootQueryType
+}
+
+type RootQueryType {
+  users: [User]
 }
 
 type User {
-  userId: String!
-  firstName: String!
-  lastName: String!
-  phoneNumber: String!
-  emailAddress: String!
+  apiType: String
+  userId: ID
+  userName: String
+  dateBirth: String
+  userAge: Int
+  phoneNumber: String
+  userPreferences: [String]
+  userAbout: String
 }
+
+directive @defer(
+  if: Boolean
+  label: String
+) on FRAGMENT_SPREAD | INLINE_FRAGMENT
+directive @stream(if: Boolean, label: String, initialCount: Int!) on FIELD

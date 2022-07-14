@@ -1,21 +1,31 @@
-// import data from "./person.json";
 
-async function fetchGraphQL(text, variables) {
-  const response = await fetch('https://localhost:4000/schema.json', {
+async function fetchGraphQL(params, variables) {
+
+  const response = await fetch('https://localhost:4000/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      query: text,
+      query: params.text,
       variables,
     }),
   });
+  
+  const json = await response.json();
 
-  // const dataJson = data;
+  if (Array.isArray(json.errors)) {
+    throw new Error(
+      `Error fetching GraphQL query '${
+        params.name
+      }' with variables '${JSON.stringify(variables)}': ${JSON.stringify(
+        json.errors,
+      )}`,
+    );
+  }
 
-  // return Promise.resolve({ data: { users: dataJson } });
-  return response.json();
+  return json;
+  
 }
 
 export default fetchGraphQL;

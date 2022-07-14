@@ -13,8 +13,9 @@ const { Suspense } = React;
 const PersonQuery = graphql`
   query AppQuery {
     users {
-      firstName
-      lastName
+      userId
+      userName
+      dateBirth
     }
   }
 `;
@@ -32,7 +33,7 @@ function App(props) {
           {data.users.map((userInfo, id) => {
             return (
               <li key={id}>
-                {userInfo.firstName} - {userInfo.lastName}
+                {userInfo.userId} - {userInfo.userName}({userInfo.dateBirth})
               </li>
             );
           })}
