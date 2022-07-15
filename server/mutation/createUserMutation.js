@@ -8,7 +8,7 @@ import userArgs from "../userArgs.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Use JSON file for storage
-const file = join(__dirname, '../../src/person.json');
+const file = join(__dirname, "../../src/person.json");
 const adapter = new JSONFile(file);
 const db = new Low(adapter);
 
@@ -21,14 +21,13 @@ const createUserMutation = {
   description: "Create a new user",
   resolve: (
     root,
-    { userName, dateBirth, userAge, phoneNumber, userPreferences, userAbout }
+    { userName, dateBirth, phoneNumber, userPreferences, userAbout }
   ) => {
     const newUser = {
       apiType: "user",
       userId: Date.now().toString(),
       userName,
       dateBirth: new Date(dateBirth).toDateString(),
-      userAge: ((new Date().getTime() - new Date(dateBirth)) / (24 * 3600 * 365.25 * 1000)) | 0,
       phoneNumber,
       userPreferences,
       userAbout,

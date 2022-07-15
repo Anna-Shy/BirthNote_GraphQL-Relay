@@ -8,7 +8,7 @@ import userArgs from "../userArgs.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Use JSON file for storage
-const file = join(__dirname, '../../src/person.json');
+const file = join(__dirname, "../../src/person.json");
 const adapter = new JSONFile(file);
 const db = new Low(adapter);
 
@@ -22,22 +22,20 @@ const updateUserMutation = {
       userId,
       userName,
       dateBirth,
-      userAge,
       phoneNumber,
       userPreferences,
       userAbout,
     }
   ) => {
     await db.read();
+
     let updateUser = db.data.users.find((user) => user.userId === userId);
 
     updateUser.userName = userName || updateUser.userName;
     updateUser.dateBirth = dateBirth || updateUser.dateBirth;
-    updateUser.userAge = userAge || updateUser.userAge;
     updateUser.phoneNumber = phoneNumber || updateUser.phoneNumber;
     updateUser.userPreferences = userPreferences || updateUser.userPreferences;
     updateUser.userAbout = userAbout || updateUser.userAbout;
-
     db.write();
     return updateUser;
   },
