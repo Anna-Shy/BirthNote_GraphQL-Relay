@@ -1,0 +1,49 @@
+.header__container {
+  margin: 7px 16px;
+  background-color: #f4f6f9;
+  box-shadow: 0 0 10px #d1d3d5;
+}
+
+.header__wrap {
+  padding: 25px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  margin: 0;
+  font-size: 36px;
+}
+
+.text {
+  font-family: "Shadows Into Light", cursive;
+  margin: 0;
+}
+
+.header__dropdown {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header__wrap {
+    padding: 20px 0;
+  }
+  .logo {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 426px) {
+  .header__wrap {
+    padding: 10px 0;
+  }
+  .logo {
+    font-size: 26px;
+  }
+}
