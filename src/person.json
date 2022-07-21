@@ -4,21 +4,60 @@
       "apiType": "user",
       "userId": "1657792154230",
       "userName": "user1",
-      "dateBirth": "Fri Sep 08 2000",
+      "dateBirth": "9 July 2022",
+      "phoneNumber": "+370962297766",
+      "userPreferences": [
+        "ball",
+        "party"
+      ],
       "userAbout": "some info"
     },
     {
       "apiType": "user",
       "userId": "1657792156434",
-      "userName": "user1",
-      "dateBirth": "09-08-2010",
+      "userName": "user2",
+      "dateBirth": "9 July 2022",
+      "phoneNumber": "+370962297766",
+      "userPreferences": [
+        "ball",
+        "party"
+      ],
       "userAbout": "some info"
     },
     {
       "apiType": "user",
-      "userId": "1657792159088",
-      "userName": "use3",
-      "dateBirth": "Fri Sep 08 2000",
+      "userId": "1657792159089",
+      "userName": "user4",
+      "dateBirth": "9 July 2022",
+      "phoneNumber": "+370962297766",
+      "userPreferences": [
+        "ball",
+        "party"
+      ],
+      "userAbout": "some info"
+    },
+    {
+      "apiType": "user",
+      "userId": "1657792159090",
+      "userName": "user5",
+      "dateBirth": "9 July 2022",
+      "phoneNumber": "+370962297766",
+      "userPreferences": [
+        "ball",
+        "party"
+      ],
+      "userAbout": "some info"
+    },
+    {
+      "apiType": "user",
+      "userId": "1657792159091",
+      "userName": "name",
+      "dateBirth": "9 July 2022",
+      "phoneNumber": "+370962297766",
+      "userPreferences": [
+        "ball",
+        "party"
+      ],
       "userAbout": "some info"
     }
   ]

@@ -18,14 +18,7 @@ const updateUserMutation = {
   description: "Update a user",
   resolve: async (
     root,
-    {
-      userId,
-      userName,
-      dateBirth,
-      phoneNumber,
-      userPreferences,
-      userAbout,
-    }
+    { userId, userName, dateBirth, phoneNumber, userPreferences, userAbout }
   ) => {
     await db.read();
 

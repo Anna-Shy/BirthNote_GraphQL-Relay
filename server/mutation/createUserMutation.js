@@ -27,7 +27,11 @@ const createUserMutation = {
       apiType: "user",
       userId: Date.now().toString(),
       userName,
-      dateBirth: new Date(dateBirth).toDateString(),
+      dateBirth: new Date(dateBirth).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      }),
       phoneNumber,
       userPreferences,
       userAbout,
