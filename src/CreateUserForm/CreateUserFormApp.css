@@ -1,0 +1,54 @@
+.create-form__container {
+  margin: 7px 4px;
+  background-color: #f4f6f9;
+  box-shadow: 0 0 10px #d1d3d5;
+}
+
+.form__wrap {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.title {
+  font-family: "Dancing Script", cursive;
+  margin: 0;
+  font-size: 30px;
+}
+
+.text {
+  font-family: "Shadows Into Light", cursive;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form__btn {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 18px;
+  margin-top: 25px;
+  background-color: #f4f6f9;
+  box-shadow: 0 0 10px #d1d3d5;
+  color: #000;
+  width: '100%';
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 26px;
+  }
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 426px) {
+  .text {
+    font-size: 14px;
+  }
+}
