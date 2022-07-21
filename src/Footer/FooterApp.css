@@ -1,0 +1,30 @@
+.container {
+  margin: 7px 16px;
+  background-color: #f4f6f9;
+  box-shadow: 0 0 10px #d1d3d5;
+}
+
+.footer__wrap {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.text {
+  font-size: 16px;
+}
+
+@media (max-width: 426px) {
+  .footer__wrap {
+    padding: 10px 0;
+  }
+  .footer__title {
+    font-size: 18px;
+  }
+  .footer__text {
+    font-size: 14px;
+  }
+}
