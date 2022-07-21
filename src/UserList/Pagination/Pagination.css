@@ -1,0 +1,21 @@
+.pagination__center {
+  text-align: center;
+}
+
+.pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
