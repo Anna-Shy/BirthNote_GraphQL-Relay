@@ -11,10 +11,7 @@ import RelayEnvironment from "./RelayEnvironment";
 import { HeaderApp } from "./Header/HeaderApp";
 import { UserListApp } from "./UserList/UserListApp";
 import { CreateUserFormApp } from "./CreateUserForm/CreateUserFormApp";
-import { Pagination } from "./UserList/Pagination/Pagination";
 import { FooterApp } from "./Footer/FooterApp";
-
-import { Container } from "@nextui-org/react";
 
 import "./App.css";
 
@@ -33,29 +30,18 @@ const preloadedQuery = loadQuery(RelayEnvironment, PersonQuery, {});
 function App(props) {
   const data = usePreloadedQuery(PersonQuery, props.preloadedQuery);
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(6);
+  const [searchField, setSearchField] = useState("");
 
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = data.users.slice(indexOfFirstPost, indexOfLastPost);
+  const searchChange = (e) => {
+    setSearchField(e.target.value);
+  };
 
   return (
     <div className="App">
-      <HeaderApp />
+      <HeaderApp usersList={data.users} searchChange={searchChange} />
 
       <main className="App-main">
-        <Container className="user-list__container">
-          <Container className="userlist__wrap">
-            <UserListApp usersList={currentPosts} />
-            <Pagination
-              postsPerPage={postsPerPage}
-              totalPosts={data.users.length}
-              paginate={(pageNumber) => setCurrentPage(pageNumber)}
-            />
-          </Container>
-        </Container>
-
+        <UserListApp usersList={data.users} searchField={searchField} />
         <CreateUserFormApp />
       </main>
 

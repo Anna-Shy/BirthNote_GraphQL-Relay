@@ -6,22 +6,7 @@
 
 .App-main {
   display: grid;
-  grid-template-columns: 70% 26.5%;
-  grid-gap: 25px;
-}
-
-.user-list__container {
-  margin: 7px 16px;
-  background-color: #f4f6f9;
-  box-shadow: 0 0 10px #d1d3d5;
-}
-
-.userlist__wrap {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-  padding: 3% 0;
+  grid-template-columns: 2fr 1fr;
 }
 
 @media (max-width: 426px) {

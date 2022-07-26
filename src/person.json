@@ -2,63 +2,59 @@
   "users": [
     {
       "apiType": "user",
-      "userId": "1657792154230",
-      "userName": "user1",
-      "dateBirth": "9 July 2022",
+      "id": "1657792154230",
+      "userName": "Kolya",
+      "dateBirth": "6 April 1990",
       "phoneNumber": "+370962297766",
-      "userPreferences": [
-        "ball",
-        "party"
-      ],
+      "userPreferences": [],
       "userAbout": "some info"
     },
     {
       "apiType": "user",
-      "userId": "1657792156434",
-      "userName": "user2",
-      "dateBirth": "9 July 2022",
+      "id": "1657792156434",
+      "userName": "Vika",
+      "dateBirth": "13 October 1988",
       "phoneNumber": "+370962297766",
-      "userPreferences": [
-        "ball",
-        "party"
-      ],
+      "userPreferences": [],
       "userAbout": "some info"
     },
     {
       "apiType": "user",
-      "userId": "1657792159089",
-      "userName": "user4",
-      "dateBirth": "9 July 2022",
+      "id": "1657792159089",
+      "userName": "Stas",
+      "dateBirth": "6 February 2003",
       "phoneNumber": "+370962297766",
-      "userPreferences": [
-        "ball",
-        "party"
-      ],
+      "userPreferences": [],
       "userAbout": "some info"
     },
     {
       "apiType": "user",
-      "userId": "1657792159090",
-      "userName": "user5",
-      "dateBirth": "9 July 2022",
+      "id": "1657792159090",
+      "userName": "Alena",
+      "dateBirth": "26 September 1971",
       "phoneNumber": "+370962297766",
-      "userPreferences": [
-        "ball",
-        "party"
-      ],
+      "userPreferences": [],
       "userAbout": "some info"
     },
     {
       "apiType": "user",
-      "userId": "1657792159091",
-      "userName": "name",
-      "dateBirth": "9 July 2022",
-      "phoneNumber": "+370962297766",
+      "id": "1658844421176",
+      "userName": "Dima",
+      "dateBirth": "11 August 2008",
+      "phoneNumber": null,
+      "userPreferences": [],
+      "userAbout": null
+    },
+    {
+      "apiType": "user",
+      "id": "1658844914858",
+      "userName": "Mark",
+      "dateBirth": "1 January 1970",
+      "phoneNumber": "84688346374646",
       "userPreferences": [
-        "ball",
-        "party"
+        "loremlorem"
       ],
-      "userAbout": "some info"
+      "userAbout": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     }
   ]
 }
