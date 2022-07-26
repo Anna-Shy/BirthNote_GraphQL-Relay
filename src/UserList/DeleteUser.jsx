@@ -4,11 +4,11 @@ import graphql from "babel-plugin-relay/macro";
 
 import { Button } from "@nextui-org/react";
 
-export const DeleteUser = ({ userId }) => {
+export const DeleteUser = ({ id }) => {
   const [deleteUser] = useMutation(
     graphql`
-      mutation DeleteUserMutation($userId: ID!) {
-        deleteUser(userId: $userId) {
+      mutation DeleteUserMutation($id: ID!) {
+        deleteUser(id: $id) {
           userName
           dateBirth
           phoneNumber
@@ -23,15 +23,14 @@ export const DeleteUser = ({ userId }) => {
     <Button
       onClick={() => {
         deleteUser({
-          variables: { userId: userId },
+          variables: { id: id },
           onCompleted(data) {
             console.log(data);
           },
         });
       }}
-      css={{ backgroundColor: "white", color: "black" }}
+      css={{ backgroundColor: "transparent", color: "black" }}
       auto
-      color="error"
       icon={
         <svg
           xmlns="http://www.w3.org/2000/svg"

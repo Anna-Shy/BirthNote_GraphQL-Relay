@@ -9,7 +9,7 @@ type RootQueryType {
 
 type User {
   apiType: String
-  userId: ID
+  id: ID
   userName: String
   dateBirth: String
   phoneNumber: String
@@ -19,13 +19,13 @@ type User {
 
 type Mutations {
   """Create a new user"""
-  createUser(apiType: String, userId: ID, userName: String, dateBirth: String, phoneNumber: String, userPreferences: [String], userAbout: String): User
+  createUser(apiType: String, id: ID, userName: String, dateBirth: String, phoneNumber: String, userPreferences: [String], userAbout: String): User
 
   """Update a user"""
-  updateUser(apiType: String, userId: ID, userName: String, dateBirth: String, phoneNumber: String, userPreferences: [String], userAbout: String): User
+  updateUser(apiType: String, id: ID, userName: String, dateBirth: String, phoneNumber: String, userPreferences: [String], userAbout: String): User
 
   """Delete a user"""
-  deleteUser(userId: ID): User
+  deleteUser(id: ID): User
 }
 
 

@@ -18,11 +18,16 @@ const updateUserMutation = {
   description: "Update a user",
   resolve: async (
     root,
-    { userId, userName, dateBirth, phoneNumber, userPreferences, userAbout }
+    { id, userName, dateBirth, phoneNumber, userPreferences, userAbout }
   ) => {
     await db.read();
+    dateBirth = new Date(dateBirth).toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
 
-    let updateUser = db.data.users.find((user) => user.userId === userId);
+    let updateUser = db.data.users.find((user) => user.id === id);
 
     updateUser.userName = userName || updateUser.userName;
     updateUser.dateBirth = dateBirth || updateUser.dateBirth;

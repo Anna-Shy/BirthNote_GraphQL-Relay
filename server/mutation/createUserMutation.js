@@ -25,7 +25,7 @@ const createUserMutation = {
   ) => {
     const newUser = {
       apiType: "user",
-      userId: Date.now().toString(),
+      id: Date.now().toString(),
       userName,
       dateBirth: new Date(dateBirth).toLocaleDateString("en-GB", {
         day: "numeric",
@@ -40,7 +40,7 @@ const createUserMutation = {
 
     db.write();
 
-    const userDB = db.data.users.find((user) => user.userId === newUser.userId);
+    const userDB = db.data.users.find((user) => user.id === newUser.id);
 
     return userDB;
   },

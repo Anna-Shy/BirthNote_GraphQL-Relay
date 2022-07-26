@@ -14,12 +14,12 @@ const db = new Low(adapter);
 
 const deleteUserMutation = {
   type: userType,
-  args: { userId: { type: GraphQLID } },
+  args: { id: { type: GraphQLID } },
   description: "Delete a user",
-  resolve: async (root, { userId }) => {
+  resolve: async (root, { id }) => {
     await db.read();
 
-    const userIndex = db.data.users.findIndex((user) => user.userId === userId);
+    const userIndex = db.data.users.findIndex((user) => user.id === id);
 
     if (userIndex === -1) {
       throw new Error("User not found!");

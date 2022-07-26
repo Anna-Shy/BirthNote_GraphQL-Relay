@@ -13,7 +13,7 @@ export const UpdateUser = ({ userInfo }) => {
   const [updateUser] = useMutation(
     graphql`
       mutation UpdateUserMutation(
-        $userId: ID!
+        $id: ID!
         $userName: String
         $dateBirth: String
         $phoneNumber: String
@@ -21,7 +21,7 @@ export const UpdateUser = ({ userInfo }) => {
         $userAbout: String
       ) {
         updateUser(
-          userId: $userId
+          id: $id
           userName: $userName
           dateBirth: $dateBirth
           phoneNumber: $phoneNumber
@@ -49,9 +49,8 @@ export const UpdateUser = ({ userInfo }) => {
     <div>
       <Button
         onClick={() => setVisible(true)}
-        css={{ backgroundColor: "white", color: "black" }}
+        css={{ backgroundColor: "transparent", color: "black" }}
         auto
-        color="error"
         icon={
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +101,7 @@ export const UpdateUser = ({ userInfo }) => {
             onClick={() => {
               updateUser({
                 variables: {
-                  userId: userInfo.userId,
+                  id: userInfo.id,
                   userName: UserNameInput,
                   dateBirth: UserDateBirthInput,
                   phoneNumber: UserPhoneNumberInput,
