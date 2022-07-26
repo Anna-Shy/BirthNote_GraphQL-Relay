@@ -46,8 +46,8 @@ export const CreateUserFormApp = () => {
   const [UserAboutInput, setUserAboutInput] = useState();
 
   return (
-    <Container className="create-form__container">
-      <Container className="form__wrap">
+    <div className="container">
+      <div className="form__wrap">
         <Text h2 className="title">
           Create user
         </Text>
@@ -101,7 +101,7 @@ export const CreateUserFormApp = () => {
             </Button>
           )}
         </Container>
-      </Container>
-    </Container>
+      </div>
+    </div>
   );
 };

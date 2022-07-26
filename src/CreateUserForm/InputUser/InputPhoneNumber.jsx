@@ -8,7 +8,7 @@ export const InputPhoneNumber = ({
 }) => {
   return (
     <Input
-      type="text"
+      type="number"
       value={PhoneNumberInputValue}
       onChange={(event) => {
         setPhoneNumberInputValue(event.target.value);

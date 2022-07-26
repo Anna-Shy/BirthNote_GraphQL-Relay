@@ -1,13 +1,17 @@
+.container {
+  margin: 7px 7;
+  background-color: #f4f6f9;
+  box-shadow: 0 0 10px #d1d3d5;
+}
+
 .title {
   font-family: "Dancing Script", cursive;
   font-size: 18px;
 }
 
-.header__text-birthday {
+.text {
   font-family: "Shadows Into Light", cursive;
-  text-align: end;
   font-size: 16px;
-  margin-right: 20px;
 }
 
 @media (max-width: 768px) {

@@ -1,16 +1,13 @@
-.header__container {
-  margin: 7px 16px;
+.container {
+  margin: 7px 4px;
   background-color: #f4f6f9;
   box-shadow: 0 0 10px #d1d3d5;
 }
 
 .header__wrap {
-  padding: 25px 0;
-  text-align: center;
+  padding: 25px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .logo {
@@ -22,12 +19,6 @@
 .text {
   font-family: "Shadows Into Light", cursive;
   margin: 0;
-}
-
-.header__dropdown {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 @media (max-width: 768px) {
