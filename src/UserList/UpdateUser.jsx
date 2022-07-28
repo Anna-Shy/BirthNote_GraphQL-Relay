@@ -39,11 +39,11 @@ export const UpdateUser = ({ userInfo }) => {
   );
   const { setVisible, bindings } = useModal();
 
-  const [UserNameInput, setUserNameInput] = useState();
-  const [UserDateBirthInput, setUserDateBirthInput] = useState();
-  const [UserPhoneNumberInput, setUserPhoneNumberInput] = useState();
-  const [UserPreferenceInput, setUserPreferenceInput] = useState([]);
-  const [UserAboutInput, setUserAboutInput] = useState();
+  const [UserNameInput, setUserNameInput] = useState(userInfo.userName);
+  const [UserDateBirthInput, setUserDateBirthInput] = useState('');
+  const [UserPhoneNumberInput, setUserPhoneNumberInput] = useState(userInfo.phoneNumber);
+  const [UserPreferenceInput, setUserPreferenceInput] = useState(userInfo.userPreferences);
+  const [UserAboutInput, setUserAboutInput] = useState(userInfo.userAbout);
 
   return (
     <div>
@@ -72,7 +72,9 @@ export const UpdateUser = ({ userInfo }) => {
         {...bindings}
       >
         <Modal.Header>
-          <Text size={30} css={{ fontFamily: "Dancing Script, cursive"}}>Update User</Text>
+          <Text size={30} css={{ fontFamily: "Dancing Script, cursive" }}>
+            Update User
+          </Text>
         </Modal.Header>
         <Modal.Body>
           <InputUserName

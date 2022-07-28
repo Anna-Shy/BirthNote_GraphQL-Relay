@@ -40,8 +40,8 @@
       "apiType": "user",
       "id": "1658844421176",
       "userName": "Dima",
-      "dateBirth": "11 August 2008",
-      "phoneNumber": null,
+      "dateBirth": "7 July 2022",
+      "phoneNumber": "746293746294",
       "userPreferences": [],
       "userAbout": null
     },
@@ -55,6 +55,51 @@
         "loremlorem"
       ],
       "userAbout": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    {
+      "apiType": "user",
+      "id": "1659016399284",
+      "userName": "rew",
+      "dateBirth": "7 July 2000",
+      "phoneNumber": "",
+      "userPreferences": [],
+      "userAbout": ""
+    },
+    {
+      "apiType": "user",
+      "id": "1659016429265",
+      "userName": "rew",
+      "dateBirth": "7 July 2000",
+      "phoneNumber": "",
+      "userPreferences": [],
+      "userAbout": ""
+    },
+    {
+      "apiType": "user",
+      "id": "1659016436261",
+      "userName": "rew",
+      "dateBirth": "7 July 2000",
+      "phoneNumber": "",
+      "userPreferences": [],
+      "userAbout": ""
+    },
+    {
+      "apiType": "user",
+      "id": "1659016482625",
+      "userName": "rew",
+      "dateBirth": "7 July 2000",
+      "phoneNumber": "",
+      "userPreferences": [],
+      "userAbout": ""
+    },
+    {
+      "apiType": "user",
+      "id": "1659016731905",
+      "userName": "rew",
+      "dateBirth": "7 July 2000",
+      "phoneNumber": "",
+      "userPreferences": [],
+      "userAbout": ""
     }
   ]
 }

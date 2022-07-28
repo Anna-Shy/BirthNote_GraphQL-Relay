@@ -13,7 +13,8 @@ export const InputUserName = ({
       onChange={(event) => {
         setUserNameInputValue(event.target.value);
       }}
-      labelLeft="Name"
+      labelLeft="Name*"
+      aria-label='User name input'
       css={{
         fontFamily: "Shadows Into Light, cursive",
         marginTop: "15px",

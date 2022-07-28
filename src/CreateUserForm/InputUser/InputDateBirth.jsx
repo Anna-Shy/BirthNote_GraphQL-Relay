@@ -13,7 +13,8 @@ export const InputDataBirth = ({
       onChange={(event) => {
         setDataBirthInputValue(event.target.value);
       }}
-      labelLeft="Birthday"
+      labelLeft="Birthday*"
+      aria-label="Birthday input"
       css={{
         fontFamily: "Shadows Into Light, cursive",
         marginTop: "15px",

@@ -1,6 +1,6 @@
 import React from "react";
 
-import {  Link, Text } from "@nextui-org/react";
+import { Link, Text } from "@nextui-org/react";
 
 import { SearchInput } from "./SearchInput";
 

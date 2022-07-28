@@ -23,8 +23,11 @@ export const SearchInput = ({ searchChange }) => {
   // });
 
   return (
-    <>
-      <Input onChange={searchChange} bordered labelLeft="Search" />
-    </>
+    <Input
+      onChange={searchChange}
+      bordered
+      labelLeft="Search"
+      aria-label="Search input"
+    />
   );
 };

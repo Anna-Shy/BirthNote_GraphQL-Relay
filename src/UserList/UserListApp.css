@@ -16,14 +16,12 @@
 
 @media (max-width: 768px) {
   .userlist__wrap {
-    grid-gap: 10px;
     padding: 20px;
   }
 }
 
 @media (max-width: 426px) {
   .userlist__wrap {
-    grid-gap: 7px;
     padding: 10px;
   }
 }

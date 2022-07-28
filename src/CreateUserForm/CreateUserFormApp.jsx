@@ -39,11 +39,11 @@ export const CreateUserFormApp = () => {
     `
   );
 
-  const [UserNameInput, setUserNameInput] = useState();
-  const [UserDateBirthInput, setUserDateBirthInput] = useState();
-  const [UserPhoneNumberInput, setUserPhoneNumberInput] = useState();
+  const [UserNameInput, setUserNameInput] = useState("rew");
+  const [UserDateBirthInput, setUserDateBirthInput] = useState("2000-07-07");
+  const [UserPhoneNumberInput, setUserPhoneNumberInput] = useState("");
   const [UserPreferenceInput, setUserPreferenceInput] = useState([]);
-  const [UserAboutInput, setUserAboutInput] = useState();
+  const [UserAboutInput, setUserAboutInput] = useState("");
 
   return (
     <div className="container">

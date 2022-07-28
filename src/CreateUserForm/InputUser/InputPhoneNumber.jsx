@@ -8,12 +8,15 @@ export const InputPhoneNumber = ({
 }) => {
   return (
     <Input
-      type="number"
+      type="text"
       value={PhoneNumberInputValue}
       onChange={(event) => {
-        setPhoneNumberInputValue(event.target.value);
+        if (event.target.value === '' || (event.target.value).match(/^[0-9\b+()]+$/)) {
+          setPhoneNumberInputValue(event.target.value);
+        }
       }}
       labelLeft="Phone number"
+      aria-label="Phone number input"
       css={{
         fontFamily: "Shadows Into Light, cursive",
         marginTop: "15px",
