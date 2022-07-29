@@ -1,37 +1,43 @@
 import React from "react";
 
-import { Input } from "@nextui-org/react";
+import TextInput from "react-autocomplete-input";
+import "react-autocomplete-input/dist/bundle.css";
 
-// const preference = [
-//   { value: "flower", label: "Flower" },
-//   { value: "cake", label: "Cake" },
-//   { value: "party", label: "Party" },
-//   { value: "chocolate", label: "Chocolate" },
-//   { value: "balloons", label: "Balloons" },
-//   { value: "concert", label: "Concert" },
-//   { value: "travelling", label: "Travelling" },
-//   { value: "picnic", label: "Picnic" },
-// ];
+const preference = [
+  "flower",
+  "cake",
+  "party",
+  "chocolate",
+  "balloons",
+  "concert",
+  "travelling",
+  "picnic",
+];
 
 export const InputUserPreference = ({
   UserPreferenceInputValue,
   setUserPreferenceInputValue,
 }) => {
   return (
-    <Input
-      type="text"
+    <TextInput
+      options={preference}
       value={UserPreferenceInputValue}
       onChange={(event) => {
-        setUserPreferenceInputValue(event.target.value.split(","));
+        setUserPreferenceInputValue(event);
       }}
-      labelLeft="Preferences"
-      aria-label="User preferences input"
-      css={{
-        fontFamily: "Shadows Into Light, cursive",
-        marginTop: "15px",
+      //defaut @
+      trigger={" "}
+      placeholder="Preference"
+      style={{
         width: "100%",
+        height: "60px",
+        marginTop: "20px",
+        padding: "5px 15px",
+        border: "2px solid #dbdbdb",
+        backgroundColor: "#f4f6f9",
+        resize: "none",
+        borderRadius: "10px",
       }}
-      underlined
     />
   );
 };

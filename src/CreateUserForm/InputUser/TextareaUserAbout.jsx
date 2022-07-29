@@ -12,14 +12,13 @@ export const TextareaUserAbout = ({
       onChange={(event) => {
         setUserAboutInputValue(event.target.value);
       }}
-      labelPlaceholder="About"
-      aria-label='About user'
+      placeholder="About"
+      aria-label='About user' 
       css={{
-        fontFamily: "Shadows Into Light, cursive",
         marginTop: "20px",
         width: "100%",
       }}
-      underlined
+      bordered
     />
   );
 };
