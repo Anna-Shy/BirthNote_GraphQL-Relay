@@ -38,15 +38,6 @@
     },
     {
       "apiType": "user",
-      "id": "1658844421176",
-      "userName": "Dima",
-      "dateBirth": "7 July 2022",
-      "phoneNumber": "746293746294",
-      "userPreferences": [],
-      "userAbout": null
-    },
-    {
-      "apiType": "user",
       "id": "1658844914858",
       "userName": "Mark",
       "dateBirth": "1 January 1970",
@@ -58,48 +49,17 @@
     },
     {
       "apiType": "user",
-      "id": "1659016399284",
-      "userName": "rew",
-      "dateBirth": "7 July 2000",
-      "phoneNumber": "",
-      "userPreferences": [],
-      "userAbout": ""
-    },
-    {
-      "apiType": "user",
-      "id": "1659016429265",
-      "userName": "rew",
-      "dateBirth": "7 July 2000",
-      "phoneNumber": "",
-      "userPreferences": [],
-      "userAbout": ""
-    },
-    {
-      "apiType": "user",
-      "id": "1659016436261",
-      "userName": "rew",
-      "dateBirth": "7 July 2000",
-      "phoneNumber": "",
-      "userPreferences": [],
-      "userAbout": ""
-    },
-    {
-      "apiType": "user",
-      "id": "1659016482625",
-      "userName": "rew",
-      "dateBirth": "7 July 2000",
-      "phoneNumber": "",
-      "userPreferences": [],
-      "userAbout": ""
-    },
-    {
-      "apiType": "user",
-      "id": "1659016731905",
-      "userName": "rew",
-      "dateBirth": "7 July 2000",
-      "phoneNumber": "",
-      "userPreferences": [],
-      "userAbout": ""
+      "id": "1659092823358",
+      "userName": "test",
+      "dateBirth": "7 June 2018",
+      "phoneNumber": "+67890",
+      "userPreferences": [
+        "jk",
+        "hj",
+        "ghjk",
+        ""
+      ],
+      "userAbout": "fcdxsza"
     }
   ]
 }

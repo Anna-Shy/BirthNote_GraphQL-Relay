@@ -15,7 +15,7 @@ export const InputPhoneNumber = ({
           setPhoneNumberInputValue(event.target.value);
         }
       }}
-      labelLeft="Phone number"
+      labelLeft="Phone"
       aria-label="Phone number input"
       css={{
         fontFamily: "Shadows Into Light, cursive",

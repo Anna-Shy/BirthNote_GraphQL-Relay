@@ -32,8 +32,9 @@ export const UserListApp = ({ usersList: usersListRef, searchField }) => {
   const columns = [
     { name: "Name", id: "userName" },
     { name: "Birth", id: "dateBirth" },
-    { name: "Preferences", id: "userPreferences" },
-    { name: "About", id: "userAbout" },
+    { name: "Age", id: "userAge" },
+    // { name: "Preferences", id: "userPreferences" },
+    // { name: "About", id: "userAbout" },
     { name: "actions", id: "actions" },
   ];
 

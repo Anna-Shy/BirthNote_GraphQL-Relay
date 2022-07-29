@@ -3,6 +3,7 @@ import { useMutation } from "react-relay";
 import graphql from "babel-plugin-relay/macro";
 
 import { Button, Modal, useModal, Text } from "@nextui-org/react";
+
 import { InputUserName } from "../CreateUserForm/InputUser/InputUserName";
 import { InputDataBirth } from "../CreateUserForm/InputUser/InputDateBirth";
 import { InputPhoneNumber } from "../CreateUserForm/InputUser/InputPhoneNumber";
@@ -40,9 +41,13 @@ export const UpdateUser = ({ userInfo }) => {
   const { setVisible, bindings } = useModal();
 
   const [UserNameInput, setUserNameInput] = useState(userInfo.userName);
-  const [UserDateBirthInput, setUserDateBirthInput] = useState('');
-  const [UserPhoneNumberInput, setUserPhoneNumberInput] = useState(userInfo.phoneNumber);
-  const [UserPreferenceInput, setUserPreferenceInput] = useState(userInfo.userPreferences);
+  const [UserDateBirthInput, setUserDateBirthInput] = useState("");
+  const [UserPhoneNumberInput, setUserPhoneNumberInput] = useState(
+    userInfo.phoneNumber
+  );
+  const [UserPreferenceInput, setUserPreferenceInput] = useState(
+    userInfo.userPreferences
+  );
   const [UserAboutInput, setUserAboutInput] = useState(userInfo.userAbout);
 
   return (
