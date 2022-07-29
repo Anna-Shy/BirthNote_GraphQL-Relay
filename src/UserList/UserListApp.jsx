@@ -33,7 +33,7 @@ export const UserListApp = ({ usersList: usersListRef, searchField }) => {
     { name: "Name", id: "userName" },
     { name: "Birth", id: "dateBirth" },
     { name: "Age", id: "userAge" },
-    { name: "Preferences", id: "userPreferences" },
+    // { name: "Preferences", id: "userPreferences" },
     // { name: "About", id: "userAbout" },
     { name: "actions", id: "actions" },
   ];
