@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "react-relay";
 import graphql from "babel-plugin-relay/macro";
 
-import { Container, Text, Button, Loading } from "@nextui-org/react";
+import { Container, Text, Button } from "@nextui-org/react";
 
 import { InputUserName } from "./InputUser/InputUserName";
 import { InputDataBirth } from "./InputUser/InputDateBirth";
@@ -96,9 +96,7 @@ export const CreateUserFormApp = () => {
               Create
             </Button>
           ) : (
-            <Button disabled className="form__btn">
-              <Loading type="gradient" color="currentColor" size="sm" />
-            </Button>
+            <Button disabled className="form__btn disabled">Create</Button>
           )}
         </Container>
       </div>

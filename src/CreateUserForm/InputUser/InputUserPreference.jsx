@@ -26,7 +26,7 @@ export const InputUserPreference = ({
         setUserPreferenceInputValue(event);
       }}
       //defaut @
-      trigger={" "}
+      // trigger={" "}
       placeholder="Preference"
       style={{
         width: "100%",

@@ -9,6 +9,8 @@ import { useAsyncList, useCollator, Table } from "@nextui-org/react";
 
 import "./UserListApp.css";
 
+const USERS_PER_PAGE = 6;
+
 export const UserListApp = ({ usersList: usersListRef, searchField }) => {
   const usersList = useFragment(
     graphql`
@@ -84,14 +86,18 @@ export const UserListApp = ({ usersList: usersListRef, searchField }) => {
             {(item) => (
               <Table.Row>
                 {(columnKey) => (
-                  <Table.Cell>
-                    {renderCell(usersList, item, columnKey)}
-                  </Table.Cell>
+                  <Table.Cell>{renderCell(item, columnKey)}</Table.Cell>
                 )}
               </Table.Row>
             )}
           </Table.Body>
-          <Table.Pagination shadow noMargin align="center" rowsPerPage={6} />
+          <Table.Pagination
+            total={Math.ceil(searchUserLists.length / USERS_PER_PAGE)}
+            rowsPerPage={USERS_PER_PAGE}
+            shadow
+            noMargin
+            align="center"
+          />
         </Table>
       </div>
     </div>

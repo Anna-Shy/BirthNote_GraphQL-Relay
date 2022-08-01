@@ -7,8 +7,8 @@ import { UserActionCol } from "./ColumnUserComponent/UserActionCol";
 import { DateBirthCol } from "./ColumnUserComponent/DateBirthCol";
 import { UserAgeCol } from "./ColumnUserComponent/UserAgeCol";
 
-export const renderCell = (usersList, user, columnKey) => {
-  const cellValue = usersList[columnKey];
+export const renderCell = (user, columnKey) => {
+  const cellValue = user[columnKey];
   switch (columnKey) {
     case "userName":
       return (

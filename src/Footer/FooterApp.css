@@ -19,7 +19,7 @@
 
 @media (max-width: 426px) {
   .footer__wrap {
-    padding: 10px 0;
+    padding: 10px;
   }
   .footer__title {
     font-size: 18px;

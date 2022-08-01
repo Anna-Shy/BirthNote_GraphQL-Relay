@@ -9,5 +9,5 @@ export const DateBirthCol = ({ dateBirth }) => {
     year: "numeric",
   });
 
-  return <Text className="text">{dateBirth}</Text>;
+  return <Text className="text">{dateBirth ? dateBirth : "-"}</Text>;
 };

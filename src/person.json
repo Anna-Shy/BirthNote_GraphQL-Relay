@@ -4,7 +4,7 @@
       "apiType": "user",
       "id": "1657792154230",
       "userName": "Kolya",
-      "dateBirth": "6 April 1990",
+      "dateBirth": "11 July 1986",
       "phoneNumber": "+370962297766",
       "userPreferences": [],
       "userAbout": "some info"
@@ -43,7 +43,7 @@
       "dateBirth": "1 January 1970",
       "phoneNumber": "84688346374646",
       "userPreferences": [
-        "loremlorem"
+        "lorem lorem"
       ],
       "userAbout": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     },
@@ -54,46 +54,40 @@
       "dateBirth": "7 June 2018",
       "phoneNumber": "+67890",
       "userPreferences": [
-        "jk",
-        "hj",
-        "ghjk",
-        ""
+        "jk hj ghjk"
       ],
       "userAbout": "fcdxsza"
     },
     {
       "apiType": "user",
-      "id": "1659101173562",
-      "userName": "tre",
-      "dateBirth": "1 July 2022",
-      "phoneNumber": "",
+      "id": "1659342620283",
+      "userName": "Rima",
+      "dateBirth": "10 February 2011",
+      "phoneNumber": "+9373648305",
       "userPreferences": [
-        "@",
-        "@flower ",
-        "@,@flowe@r ",
-        "@,@flowe@cake r "
+        "@cake @flower @party "
       ],
-      "userAbout": ""
+      "userAbout": "Sister brother"
     },
     {
       "apiType": "user",
-      "id": "1659101285744",
-      "userName": "hgfds",
-      "dateBirth": "8 July 2022",
-      "phoneNumber": "",
+      "id": "1659342940918",
+      "userName": "Name",
+      "dateBirth": "10 February 2016",
+      "phoneNumber": "34567890",
       "userPreferences": [
-        "@cake @cake @flower "
+        "@cake @balloons "
       ],
-      "userAbout": ""
+      "userAbout": "hugfbdy"
     },
     {
       "apiType": "user",
-      "id": "1659101318767",
-      "userName": "gfd",
-      "dateBirth": "30 June 2022",
-      "phoneNumber": "",
+      "id": "1659347884726",
+      "userName": "Marina",
+      "dateBirth": "12 January 2001",
+      "phoneNumber": "+456789",
       "userPreferences": [
-        "@cake @cake @flower "
+        "cake @flower "
       ],
       "userAbout": ""
     }

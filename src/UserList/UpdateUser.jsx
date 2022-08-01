@@ -41,7 +41,9 @@ export const UpdateUser = ({ userInfo }) => {
   const { setVisible, bindings } = useModal();
 
   const [UserNameInput, setUserNameInput] = useState(userInfo.userName);
-  const [UserDateBirthInput, setUserDateBirthInput] = useState("");
+  const [UserDateBirthInput, setUserDateBirthInput] = useState(
+    new Date(userInfo.dateBirth).toLocaleDateString("sv")
+  );
   const [UserPhoneNumberInput, setUserPhoneNumberInput] = useState(
     userInfo.phoneNumber
   );

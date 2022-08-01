@@ -99,14 +99,13 @@ export const ShowUserInfo = ({ userInfo }) => {
             underlined
             readOnly
           />
-          <Input
-            type="text"
+          <Textarea
             value={userInfo.userPreferences}
-            labelLeft="Preference"
-            aria-label="User preference input"
+            labelPlaceholder="Preference"
+            aria-label="User preference user"
             css={{
               fontFamily: "Shadows Into Light, cursive",
-              marginTop: "15px",
+              marginTop: "20px",
               width: "100%",
             }}
             underlined
