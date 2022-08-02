@@ -1,31 +1,20 @@
 # BirthNote
 
-App with notes birth date
-https://docs.google.com/document/d/1YJ7MKjWfbQdg5hnJXMhpNMw1iUZebryVTy3EySwSsMA/edit
+App with notes birth date - [docs](https://docs.google.com/document/d/1ihFGUtjCtAhvJcf0fOAWQ-KnYvp_WirDFCx5_WKLTsA/edit?usp=sharing)
 
-Inside that directory, you can run several commands:
+Can create, edit and delete the record
+All this info is saved on device like json
 
-  npm start / yarn start
-    Starts the development server.
-    http://localhost:3000/
+![image](https://user-images.githubusercontent.com/55240742/182357099-c5c4309b-e081-4d8b-8351-b03e7f1aa00c.png)
 
-  npm run build
-    Bundles the app into static files for production.
+Run several commands:
+  `npm i`
+   Install the app
+  
+  `npm server / yarn server`
+   Start the [server](http://localhost:4000/graphql)
 
-  npm test
-    Starts the test runner.
-
-  npm run eject
-    Removes this tool and copies build dependencies, configuration files
-    and scripts into the app directory. If you do this, you can’t go back!
-
-  npm server / yarn server
-    Start the server
-    http://localhost:4000/graphql
-
-We suggest that you begin by typing:
-
-  cd birth-note
-  npm start
+  `npm start / yarn start`
+    Starts the development [server](http://localhost:3000/)
 
 Happy hacking!
